@@ -19,11 +19,16 @@ def get_project_root():
         ):
             logger.info(f"PROJECT_ROOT set to {str(current_path)}")
             return current_path
-        current_path = current_path.parent
+        parent_path = current_path.parent
+        if parent_path == current_path:
+            # loop until top level and land cwd
+            cwd = Path.cwd()
+            logger.info(f"PROJECT_ROOT set to current working directory: {str(cwd)}")
+            return cwd
+        current_path = parent_path
 
-
-PROJECT_ROOT = get_project_root()
-DATA_PATH = PROJECT_ROOT / "data"
-NOOTBOOKS_ROOT = PROJECT_ROOT / "notebooks"
-LOG_PATH = PROJECT_ROOT / "logs"
+ROOT = get_project_root()
+PATH_DATA = ROOT / "data"
+PATH_NOOTBOOKS = ROOT / "notebooks"
+PATH_LOG = ROOT / "logs"
 

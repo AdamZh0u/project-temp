@@ -4,5 +4,8 @@
     "python.formatting.provider": "none",
     "outline.showConstants": false,
     "outline.showVariables": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     // "notebook.outline.showCodeCells": true
 }
