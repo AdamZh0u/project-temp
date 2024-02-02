@@ -12,7 +12,7 @@
 		"window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",
 		"window.titleSeparator": " _ ",
 		"terminal.integrated.fontFamily": "monospace",
-  		"editor.fontFamily": "Inconsolata Nerd Font Mono, Consolas, 'Courier New', monospace",
+  		"editor.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
 		// ## path 不同平台符号不同 
 		// ref: https://stackoverflow.com/questions/53653083/how-to-correctly-set-pythonpath-for-visual-studio-code
 		"terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"},
