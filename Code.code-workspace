@@ -11,6 +11,7 @@
 
 		"window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",
 		"window.titleSeparator": " _ ",
+		"editor.fontSize": 12, // 字体大小
 		"terminal.integrated.fontFamily": "monospace",
   		"editor.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
 		// ## path 不同平台符号不同 
@@ -31,6 +32,15 @@
 		},
 		"python.languageServer": "Pylance", 
 		
+		// ## cpp
+		"code-runner.clearPreviousOutput": true,
+		"code-runner.ignoreSelection": true,
+		"code-runner.preserveFocus": false,
+		"code-runner.runInTerminal": true,
+		"code-runner.saveAllFilesBeforeRun": true,
+		"code-runner.saveFileBeforeRun": true,
+		"C_Cpp.debugShortcut": false,
+		// 关闭快捷键
 	},
 	"launch": {
 		// debug 运行 python 文件 相对路径
