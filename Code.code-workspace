@@ -40,6 +40,8 @@
 		"code-runner.saveAllFilesBeforeRun": true,
 		"code-runner.saveFileBeforeRun": true,
 		"C_Cpp.debugShortcut": false,
+		"editor.wordWrap": "on",
+		"notebook.output.wordWrap": true,
 		// 关闭快捷键
 	},
 	"launch": {
