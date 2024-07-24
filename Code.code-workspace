@@ -31,6 +31,8 @@
 			"editor.defaultFormatter": "ms-python.autopep8"
 		},
 		"python.languageServer": "Pylance", 
+		"editor.wordWrap": "on",
+		"notebook.output.wordWrap": true,
 		
 		// ## cpp
 		"code-runner.clearPreviousOutput": true,
