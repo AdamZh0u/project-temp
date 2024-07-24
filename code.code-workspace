@@ -14,6 +14,10 @@
 		"editor.fontSize": 12, // 字体大小
 		"terminal.integrated.fontFamily": "monospace",
   		"editor.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+
+		"editor.wordWrap": "on",
+		"notebook.output.wordWrap": true,
+		
 		// ## path 不同平台符号不同 
 		// ref: https://stackoverflow.com/questions/53653083/how-to-correctly-set-pythonpath-for-visual-studio-code
 		"terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"},
@@ -31,9 +35,8 @@
 			"editor.defaultFormatter": "ms-python.autopep8"
 		},
 		"python.languageServer": "Pylance", 
-		"editor.wordWrap": "on",
-		"notebook.output.wordWrap": true,
-		
+		"python.analysis.autoImportCompletions": true,
+
 		// ## cpp
 		"code-runner.clearPreviousOutput": true,
 		"code-runner.ignoreSelection": true,
