@@ -103,6 +103,7 @@ pre-commit run --all-files
     - [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
         - vscode extension: [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
     - commitizen
+    - `cz bump --changelog` for updating changelog
 
 # Reference
 * [VS Code Python Environments Documentation](https://code.visualstudio.com/docs/python/environments#_creating-environments)
