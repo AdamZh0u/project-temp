@@ -66,13 +66,12 @@ mkdocs new [dir-name] # create a new project
 mkdocs serve -f docs/mkdocs.yml
 ```
 
-- mathjax support
-- mkdocstrings-python
+* mathjax support
+* mkdocstrings-python
     - demo
     - [Google Style Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
-- gen-files
+* gen-files
     - [gen-files](https://mkdocstrings.github.io/recipes/)
-
 
 ### jupyter
 
@@ -83,12 +82,20 @@ mkdocs serve -f docs/mkdocs.yml
 ## pre-commit
 
 * pre-commit
+
 ```bash
 pre-commit install
 
 # run pre-commit
 pre-commit run --all-files
 ```
+
+## github actions
+
+* test locally
+    - act
+* release-please
+    - [release-please](https://github.com/googleapis/release-please)
 
 # Reference
 * [VS Code Python Environments Documentation](https://code.visualstudio.com/docs/python/environments#_creating-environments)
