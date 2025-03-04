@@ -99,6 +99,7 @@ pre-commit run --all-files
     - act
 * release-please
     - [release-please](https://github.com/googleapis/release-please)
+    - put github token in repo secrets
 * commit message
     - [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
         - vscode extension: [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
