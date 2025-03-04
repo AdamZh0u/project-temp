@@ -44,7 +44,7 @@
             "*.log",
             "*.fdb_latexmk"
         ],
-        // preview 
+        // preview
         "latex-workshop.view.pdf.backgroundColor": "#000000",
         "latex-workshop.view.pdf.viewer": "tab",
         "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click", //反向同步

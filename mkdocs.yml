@@ -1,0 +1,78 @@
+site_name: Project-Temp
+docs_dir: docs
+site_dir: site # 输出目录
+site_url: https://AdamZh0u.github.io/project-temp/
+repo_url: https://github.com/AdamZh0u/project-temp
+theme:
+  name: material
+  features:
+    # - navigation.tabs #
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      font:
+        text: Roboto
+        code: Roboto Mono
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Code Reference: reference/
+  # - About:
+  #   - License: license.md
+  #   - Release Notes: release-notes.md
+
+plugins:
+  - social
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [./src]
+  - gen-files:
+      scripts:
+      - scripts/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/AdamZh0u
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      default_language: python
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+copyright: |
+  &copy; 2025 <a href="https://github.com/AdamZh0u"  target="_blank" rel="noopener">AdamZh0u</a>
+
+extra_javascript:
+  - javascript/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

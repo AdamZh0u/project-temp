@@ -5,8 +5,10 @@
 @Author  : adamzh0u
 @File    : const.py
 """
+
 from pathlib import Path
 from loguru import logger
+
 
 def get_project_root():
     """Search upwards to find the project root directory."""
@@ -27,8 +29,8 @@ def get_project_root():
             return cwd
         current_path = parent_path
 
+
 ROOT = get_project_root()
 PATH_DATA = ROOT / "data"
 PATH_NOOTBOOKS = ROOT / "notebooks"
 PATH_LOG = ROOT / "logs"
-

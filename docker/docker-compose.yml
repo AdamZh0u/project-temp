@@ -1,0 +1,12 @@
+name: project-temp
+
+services:
+  project-temp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: project-temp
+    volumes:
+      - ./:/workspace
+    ports:
+      - 8000:8000

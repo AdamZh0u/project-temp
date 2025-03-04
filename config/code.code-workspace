@@ -17,24 +17,24 @@
 
 		"editor.wordWrap": "on",
 		"notebook.output.wordWrap": true,
-		
-		// ## path 不同平台符号不同 
+
+		// ## path 不同平台符号不同
 		// ref: https://stackoverflow.com/questions/53653083/how-to-correctly-set-pythonpath-for-visual-studio-code
 		"terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"},
 		"terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"},
 		"terminal.integrated.env.osx": {"PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"},
-		
-		// ## jupyter 
+
+		// ## jupyter
 		"jupyter.notebookFileRoot": "${workspaceFolder}",
 		"jupyter.interactiveWindow.textEditor.executeSelection": true, // 交互模式下执行选中的代码
-		// "notebook.outline.showCodeCells": true 
+		// "notebook.outline.showCodeCells": true
 		"notebook.lineNumbers": "on",
 
-		// ## python 
+		// ## python
 		"[python]": {
 			"editor.defaultFormatter": "ms-python.autopep8"
 		},
-		"python.languageServer": "Pylance", 
+		"python.languageServer": "Pylance",
 		"python.analysis.autoImportCompletions": true,
 
 		// ## cpp

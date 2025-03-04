@@ -16,10 +16,10 @@ RUN apt update && \
     apt-get install nano
 
 # --- python pakgs ---
-# 复制本地文件到容器中  
+# 复制本地文件到容器中
 COPY requirements.txt .
 
-# # 安装Python依赖z 
+# # 安装Python依赖z
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
