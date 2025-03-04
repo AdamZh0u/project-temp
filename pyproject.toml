@@ -1,6 +1,6 @@
 [project]
 name = "project-temp"
-version = "0.1.0"
+version = "0.0.1"
 description = "Add your description here"
 authors = [
     {name = "AdamZh0u", email = "zhouzz400@gmail.com"}
@@ -40,3 +40,11 @@ docs = [
 # [build-system]
 # requires = ["uv"]
 # build-backend = "uv"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$major.$minor.$patch$prerelease"
+version_scheme = "pep440"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
