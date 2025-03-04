@@ -68,9 +68,12 @@ mkdocs serve -f docs/mkdocs.yml
 
 * mathjax support
 * mkdocstrings-python
+
     - demo
     - [Google Style Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+
 * gen-files
+
     - [gen-files](https://mkdocstrings.github.io/recipes/)
 
 ### jupyter
@@ -96,6 +99,10 @@ pre-commit run --all-files
     - act
 * release-please
     - [release-please](https://github.com/googleapis/release-please)
+* commit message
+    - [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+        - vscode extension: [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+    - commitizen
 
 # Reference
 * [VS Code Python Environments Documentation](https://code.visualstudio.com/docs/python/environments#_creating-environments)
