@@ -11,14 +11,14 @@
 
 		"window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",
 		"window.titleSeparator": " _ ",
-		"editor.fontSize": 12, // 字体大小
+
+		// # interface
 		"terminal.integrated.fontFamily": "monospace",
+		"editor.fontSize": 12, // 字体大小
   		"editor.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
-
 		"editor.wordWrap": "on",
-		"notebook.output.wordWrap": true,
 
-		// ## path 不同平台符号不同
+		// # add working directory folder to python path in different platforms
 		// ref: https://stackoverflow.com/questions/53653083/how-to-correctly-set-pythonpath-for-visual-studio-code
 		"terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"},
 		"terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"},
@@ -27,12 +27,13 @@
 		// ## jupyter
 		"jupyter.notebookFileRoot": "${workspaceFolder}",
 		"jupyter.interactiveWindow.textEditor.executeSelection": true, // 交互模式下执行选中的代码
-		// "notebook.outline.showCodeCells": true
+		"notebook.outline.showCodeCells": true,
 		"notebook.lineNumbers": "on",
+		"notebook.output.wordWrap": true, // notebook 自动换行
 
 		// ## python
 		"[python]": {
-			"editor.defaultFormatter": "ms-python.autopep8"
+			"editor.defaultFormatter": "ms-python.black-formatter"
 		},
 		"python.languageServer": "Pylance",
 		"python.analysis.autoImportCompletions": true,
@@ -46,6 +47,16 @@
 		"code-runner.saveFileBeforeRun": true,
 		"C_Cpp.debugShortcut": false,
 		// 关闭快捷键
+
+		// ## rust
+		"rust-analyzer.check.enable": false,
+		"rust-analyzer.check.onSave": false,
+		"rust-analyzer.check.onSaveMode": "manual",
+		"rust-analyzer.check.onSaveTrigger": "manual",
+		"files.readonlyInclude": {
+			"**/.cargo/registry/src/**/*.rs": true,
+			"**/lib/rustlib/src/rust/library/**/*.rs": true
+		},
 	},
 	"launch": {
 		// debug 运行 python 文件 相对路径

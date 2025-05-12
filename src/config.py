@@ -6,10 +6,17 @@
 @File    : const.py
 """
 
+import glob
+import os
+import tomllib
 from pathlib import Path
+
 from loguru import logger
 
 
+# ===============================================================
+# path settings
+# ===============================================================
 def get_project_root():
     """Search upwards to find the project root directory."""
     current_path = Path.cwd()
@@ -32,5 +39,63 @@ def get_project_root():
 
 ROOT = get_project_root()
 PATH_DATA = ROOT / "data"
-PATH_NOOTBOOKS = ROOT / "notebooks"
-PATH_LOG = ROOT / "logs"
+PATH_NOTEBOOKS = ROOT / "notebooks"
+PATH_LOGS = ROOT / "logs"
+PATH_CONFIG = ROOT / "config"
+
+# ===============================================================
+# logger
+# ===============================================================
+ENV = os.environ.get("ENV", "dev")
+
+logger.add(
+    os.path.join(
+        PATH_LOGS,
+        f"log_{ENV}.log",  # Use environment in log filename
+    ),
+    rotation="500 MB",  # Rotate logs when they exceed 500MB
+    retention="10 days",  # Keep logs for 10 days
+    level="INFO",
+    format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
+)
+
+
+def get_logger():
+    return logger
+
+
+# ===============================================================
+# config params
+# ===============================================================
+
+
+def load_config(CONFIG_FILES):
+    """
+    Load config files, prioritize environment-specific configs, inherit missing configs from base config
+    :return: dict
+    """
+    final_config = {}
+    for file in CONFIG_FILES:
+        with open(file, "rb") as f:
+            config = tomllib.load(f)
+        final_config.update(config)
+    return final_config
+
+
+try:
+    config_files = glob.glob(f"{PATH_CONFIG}/*.toml")
+    CONFIG = load_config(config_files)
+except Exception as e:
+    logger.error(f"Error loading config: {e}")
+    raise e
+
+
+if __name__ == "__main__":
+    print(PATH_DATA)
+    print(PATH_NOTEBOOKS)
+    print(PATH_LOGS)
+
+    print(CONFIG)
+    print(os.environ["PYTHONPATH"])
+
+    print(get_logger())

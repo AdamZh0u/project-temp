@@ -17,6 +17,7 @@ theme:
     - content.code.copy
   language: en
   palette:
+    - primary: deep purple
     - scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
@@ -45,7 +46,7 @@ plugins:
           paths: [./src]
   - gen-files:
       scripts:
-      - scripts/gen_ref_pages.py
+        - scripts/gen_ref_pages.py
   - literate-nav:
       nav_file: SUMMARY.md
   - section-index
